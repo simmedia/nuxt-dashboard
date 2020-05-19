@@ -1,6 +1,6 @@
 # my-nuxt-app
 
-> My stupendous Nuxt.js project
+> Nuxt + Vuetify Dashboard
 
 ## Build Setup
 
