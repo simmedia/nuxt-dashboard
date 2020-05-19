@@ -23,7 +23,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar color="info" :clipped-left="clipped" fixed app>
-      <v-app-bar-nav-icon class="hidden-md-and-up" @click.stop="drawer = !drawer" />
+      <v-app-bar-nav-icon id="menuTrigger" @click.stop="drawer = !drawer" />
       <v-spacer />
 
       <!-- Navbar right content -->
@@ -34,7 +34,7 @@
         rounded
         clearable
         prepend-icon="mdi-magnify"
-      ></v-text-field> -->
+      ></v-text-field>-->
       <v-btn text rounded fab>
         <v-icon>mdi-account</v-icon>
       </v-btn>
@@ -115,5 +115,13 @@ export default {
 
 .v-input {
   max-width: 300px !important;
+}
+#menuTrigger {
+  display: block !important;
+}
+@media screen and (min-width: 1310px) {
+  #menuTrigger {
+    display: none !important;
+  }
 }
 </style>

@@ -11,9 +11,6 @@
         </v-timeline-item>
       </v-slide-x-transition>
     </v-timeline>
-    <v-btn fixed dark fab bottom right color="pink">
-      <v-icon>mdi-plus</v-icon>
-    </v-btn>
   </v-card>
 </template>
 
@@ -47,9 +44,5 @@ export default {
 </script>
 
 <style>
-.v-btn--bottom {
- bottom: 7% !important;
-  z-index: 1 !important;
-}
 
 </style>
