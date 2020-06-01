@@ -1,6 +1,6 @@
 <template>
   <v-card class="mt-5 pa-5" color="white">
-    <v-card-title class="accent--text">Transitions</v-card-title>
+    <v-card-title class="accent--text">Transactions</v-card-title>
     <v-timeline dense clipped>
       <v-slide-x-transition group>
         <v-timeline-item v-for="event in timeline" :key="event.id" class="mb-4" color="info" small>
@@ -18,20 +18,20 @@
 import moment from 'moment'
 export default {
   data: () => ({
-    events: [],
+    transactions: [],
     input: null,
     nonce: 0
   }),
 
   computed: {
     timeline() {
-      return this.events.slice().reverse()
+      return this.transactions.slice().reverse()
     }
   },
 
   methods: {
     comment() {
-      this.events.push({
+      this.transactions.push({
         id: this.nonce++,
         text: this.input,
         time: moment().format('MMMM Do YYYY, h:mm:ss a')

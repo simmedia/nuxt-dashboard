@@ -27,19 +27,19 @@
     <vue-chart />
     <v-row>
       <v-col cols="12" md="12">
-        <budget-transitions />
+        <budget-transactions />
       </v-col>
     </v-row>
   </div>
 </template>
 
 <script>
-import Transitions from './transitions'
+import Transactions from './transactions'
 import Chart from './chart'
 
 export default {
   components: {
-    'budget-transitions': Transitions,
+    'budget-transactions': Transactions,
     'vue-chart': Chart
   },
   computed: {
