@@ -40,8 +40,6 @@ export default {
       })
     },
   },
-  created() {
-    this.$store.dispatch('events/SET_EVENTS')
-  }
+
 }
 </script>

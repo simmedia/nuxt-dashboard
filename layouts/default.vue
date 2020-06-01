@@ -61,7 +61,7 @@ export default {
   data() {
     return {
       clipped: false,
-      drawer: true,
+      drawer: false,
       fixed: true,
       items: [
         {
@@ -91,6 +91,9 @@ export default {
         }
       ]
     }
+  },
+    created() {
+    this.$store.dispatch('events/SET_EVENTS')
   }
 }
 </script>
