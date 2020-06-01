@@ -3,10 +3,10 @@
     <v-flex xs12 sm8 md6></v-flex>
     <v-btn>CREATE</v-btn>
     <span>asdasd</span>
-    <span class="primary--text">{{this.$store.state.budget.list}}</span>
+
     <ul>
-      <li class="red" v-for="(user,index) in users" :key="index">
-        {{user.text}}
+      <li class="red" v-for="(event, index) in events" :key="index">
+        {{ event.name }}
       </li>
     </ul>
   </v-layout>
@@ -16,18 +16,32 @@
 import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
+import { db } from '~/plugins/firebase.js'
+
 export default {
   components: {
     Logo,
     VuetifyLogo
   },
   data() {
-    return {}
+    return {
+    }
   },
   computed: {
-    users() {
-      return this.$store.getters['budget/getList']
+    events() {
+      return this.$store.getters['events/getEvents']
     }
+  },
+  methods: {
+    writeToFirestore() {
+      const ref = db.collection('calEvent')
+      ref.add({
+        name: 'Stefan'
+      })
+    },
+  },
+  created() {
+    this.$store.dispatch('events/SET_EVENTS')
   }
 }
 </script>

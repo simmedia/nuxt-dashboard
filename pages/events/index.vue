@@ -109,31 +109,9 @@ export default {
     dialog: false
   }),
   mounted() {
-    this.readFromFirestore()
+    
   },
   methods: {
-    async getEvents() {
-      let snapshot = await this.$fireStore.collection('calEvent').get()
-      let events = []
-      snapshot.forEach(doc => {
-        console.log(doc)
-      })
-    },
-    async readFromFirestore() {
-      const messageRef = this.$fireStore.collection('calEvent')
-      try {
-        const snapshot = await messageRef.get()
-        const doc = snapshot.data()
-        if (!doc) {
-          alert('Document does not exist.')
-          return
-        }
-        alert(doc)
-      } catch (e) {
-        alert(e)
-        return
-      }
-    }
   }
 }
 </script>

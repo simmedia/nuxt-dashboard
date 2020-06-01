@@ -31,6 +31,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/firebase.js'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -42,25 +43,6 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    [
-      '@nuxtjs/firebase',
-      {
-        config: {
-          apiKey: "AIzaSyCjwXl7D-rro1-F7exx_LE65XkacTRjGUo",
-          authDomain: "nuxt-dashboard-25a89.firebaseapp.com",
-          databaseURL: "https://nuxt-dashboard-25a89.firebaseio.com",
-          projectId: "nuxt-dashboard-25a89",
-          storageBucket: "nuxt-dashboard-25a89.appspot.com",
-          messagingSenderId: "101509546194",
-          appId: "1:101509546194:web:9354923a48f6b912c8ad0b"
-
-        },
-        services: {
-          firestore: true,
-          auth: true // Just as example. Can be any other service.
-        }
-      }
-    ],
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
